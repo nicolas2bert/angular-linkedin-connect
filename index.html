@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>skeleton</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+   <script src="lib/angular/angular.min.js"></script>
+</head>
+<body ng-app="app">
+
+  <div ng-controller="HelloCtrl" class="container">
+    <a ng-click="login();">Login linkedin</a>
+  </div>
+
+  <script src="lib/angular/angular-resource.min.js"></script>
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/ui-bootstrap.min.js"></script>
+  <script src="lib/linkedin/angular-the-linkedin.js"></script>
+
+  <script type="text/javascript">
+    var app = angular.module("app", ['thelinkedin']);
+    app.config(['TheLinkedinProvider', function(TheLinkedinProvider) {
+      TheLinkedinProvider.init({
+          scopes:"r_fullprofile "
+       });
+    }]);
+    app.controller("HelloCtrl", function($scope,TheLinkedin) {
+      $scope.login = function () {
+        TheLinkedin.login();
+      };
+    });
+
+  </script>
+
+</body>
+</html>
+
+
+
