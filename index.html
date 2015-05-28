@@ -2,9 +2,8 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>skeleton</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-   <script src="lib/angular/angular.min.js"></script>
+  <title>nicolas2bert</title>
+   <script src="angular.min.js"></script>
 </head>
 <body ng-app="app">
 
@@ -12,10 +11,8 @@
     <a ng-click="login();">Login linkedin</a>
   </div>
 
-  <script src="lib/angular/angular-resource.min.js"></script>
-  <script src="lib/jquery.min.js"></script>
-  <script src="lib/ui-bootstrap.min.js"></script>
-  <script src="lib/linkedin/angular-the-linkedin.js"></script>
+  <script src="jquery.min.js"></script>
+  <script src="angular-the-linkedin.js"></script>
 
   <script type="text/javascript">
     var app = angular.module("app", ['thelinkedin']);
@@ -26,7 +23,9 @@
     }]);
     app.controller("HelloCtrl", function($scope,TheLinkedin) {
       $scope.login = function () {
-        TheLinkedin.login();
+        TheLinkedin.login().then(function(response){
+          alert(JSON.stringify(response));
+        });
       };
     });
 

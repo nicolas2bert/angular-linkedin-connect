@@ -133,7 +133,7 @@ angular.module('thelinkedin', []).
 // Initialization of module
 .run([function(TheLinkedin) {
     var a = document.createElement("script");
-    a.type = "text/javascript", a.async = false, a.src = "http://platform.linkedin.com/in.js?async=true";
+    a.type = "text/javascript", a.async = false, a.src = "https://platform.linkedin.com/in.js?async=true";
     a.onload = function(){
       IN.init({api_key: '757h9srh7nz5jj', authorize: true});
     };
