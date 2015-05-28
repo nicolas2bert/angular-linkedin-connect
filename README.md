@@ -41,4 +41,4 @@ var app = angular.module("app", ['thelinkedin']);
 
 ```
 
-3) 
+* 3) Enjoy your Linkedin API
