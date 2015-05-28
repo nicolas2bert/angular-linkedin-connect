@@ -23,7 +23,7 @@ var app = angular.module("app", ['thelinkedin']);
 });
 ```
 
-* 2) Add lib\linekdin\angular-the-linekdin.js
+* 2) Add angular-the-linekdin.js
 
 2.1) Change the api_key
 
