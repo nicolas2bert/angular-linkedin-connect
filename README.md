@@ -1,6 +1,6 @@
 # angular-linkedin-connect
 angular-linkedin-connect
-A angular module which handles the login with linkedin
+A really simple  angular module which handles the login with linkedin
 
 ### Usage
 
